@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Retail Shop </title>
+<meta name="keywords" content=", Retail shop, website templates, CSS, HTML" />
+<meta name="description" content="Retail Shop - " />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<script>
+    var data1;
+    function jump(data1)
+    {
+        window.location.assign("new_dbPHP.php");
+    }
+    var delay=20;
+var imgsize=5;
+var arrsize=4;
+var timeon;
+var whoc = new Array(arrsize);
+var wid;
+var hei;
+var i=0;
+function zoom_out(p,q,which)
+{  
+   if(which.width <= p)
+      which.width += imgsize;
+   if(which.height <= q)
+      which.height += imgsize;
+   if(which.width <= p)
+   {
+      var tmp=which.id;
+      timeon=eval("setTimeout('zoom_out("+p+","+q+","+tmp+")', delay)");
+   }
+   if(which.width > p)   
+   {
+      zoom_check(which.id);
+      clearTimeout(timeon);
+   }
+}
+function zoom_check(xx)
+{
+    for(var x=0; x<(whoc.length);x++)
+    {
+        if(whoc[x] != null && whoc[x] != xx)
+        {
+	    var ff = document.getElementById(whoc[x]);
+            ff.width=wid;
+	    ff.height=hei;
+        }
+    }
+}
+function zoom_in(r,s,asd)
+{
+  if(i<(whoc.length-1))
+	i++;
+  else
+	i=0;
+  whoc[i] = asd.id;
+  if(asd.width >= r)
+      asd.width -= imgsize;
+  if(asd.height >= s)
+      asd.height -= imgsize; 
+  asd.width=r;
+  asd.height=s;
+  wid=asd.width;
+  hei=asd.height;
+}
+function ctck()
+{
+var sds = document.getElementById("dum");
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+var sdss = document.getElementById("dumdiv");
+if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+    
+ </script>
+</head>
+<body>
+<div id="templatemo_container">
+<div id="templatemo_top_panel">
+    	<div id="templatemo_language_section">
+<a href="#"><img src="images/templatemo_flag_01.gif" alt="flag 1" /></a>
+
+            <a href="#"><img src="images/templatemo_flag_02.gif" alt="flag 2" /></a>
+            <a href="#"><img src="images/templatemo_flag_03.gif" alt="flag 3" /></a>
+            <a href="#"><img src="images/templatemo_flag_04.gif" alt="flag 4" /></a>
+            <a href="#"><img src="images/templatemo_flag_05.gif" alt="flag 5" /></a>
+        </div>
+        <div id="templatemo_shopping_cart">
+       	    <span>(<a href="shoppingcart1.php">Shopping Cart </a>)</span>      
+        </div>
+
+  </div>
+       
+             
+    <table cellspacing="20">
+            <tr>
+                
+             <td>
+                    
+              <div id="temp_content">
+                  
+                         <div class="product_box">
+             	<h3>Golden pot</h3>
+                <img src="imagsss/g1.jpg" alt="image" width="150" height="150" width="170" height="170" onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>70.00 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+             </div>
+              </div>
+                </td>
+             
+             <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3>Show piece </h3>
+                <img src="imagsss/g2.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+              
+             <td>
+                 <div id="temp_content">
+                     <div class="product_box">
+             	<h3>Flower bouque</h3>
+                <img src="imagsss/g3.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+               
+                <div class="price">PRICE:<span>50.00 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+                 </div>
+        </div>
+                     </div>
+             </div>
+                </div>
+                    </td>
+                 <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3> vase</h3>
+                <img src="imagsss/g4.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+            </tr>
+        <tr>                
+               <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3>Lion statue</h3>
+                <img src="imagsss/g5.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+       <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3>Flowers</h3>
+                <img src="imagsss/g7.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+             <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3>Watch</h3>
+                <img src="imagsss/g8.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcart1.php">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+        <td>
+                 <div id="temp_content">
+                     
+                <div class="product_box">
+             	<h3>antique pieces</h3>
+                <img src="imagsss/g9.jpg" alt="image" width="150" height="150" width="170" height="170"onMouseover="zoom_out(150,160,this)" onMouseout="zoom_in(140,150,this)" />
+              
+                <div class="price">PRICE:<span>150.0 </span></div>                           
+             	<div class="buynow"><a href="shoppingcard.html">Buy Now</a></div><a href="#">Details</a>
+
+              </div>
+             </div>
+       </td>
+             </tr>
+<div class="cleaner_with_height">&nbsp;</div>
+    </table>
+     <a href="gift.php"><h3>BACK </h3> </a>   <br>
+     <div id="templatemo_footer_panel">
+        <div id="footer_left">
+            <img src="images/mastercard.gif" alt="Master Card" /><img src="images/visa.gif" alt="Visa Card" /><img src="images/paypal.gif" alt="PayPal" /><img src="images/verisignsecured.gif" alt="Verisign Secured" />
+        </div>
+
+        <div id="footer_right">
+            Copyright © 2024 <a href="#">Your Company Name</a><br />
+			
+        </div>
+        
+        <div class="cleaner">&nbsp;</div>
+    </div>
+
+</div>
+</html>
